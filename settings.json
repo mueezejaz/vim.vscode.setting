@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.suggest.insertMode": "replace",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.linkedEditing": true,
@@ -92,6 +92,20 @@
             "after": ["<Esc>"]
         }
     ],
+
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "p"],
+        "commands": [
+          {
+            "command": "vim.remap",
+            "args": {
+              "after": ["\"", "_", "d", "P"]
+            }
+          }
+        ]
+      }
+    ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
@@ -112,5 +126,11 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "editor.autoClosingBrackets": "never",
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "explorer.compactFolders": false
 }
