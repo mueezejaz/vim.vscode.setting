@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 [
   // NAVIGATION
   {
@@ -59,11 +60,11 @@
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
   },
-  {
-    "key": "shift+n",
-    "command": "workbench.action.newWindow",
-    "when": "!explorerViewletFocus"
-  },
+  // {
+  //   "key": "shift+n",
+  //   "command": "workbench.action.newWindow",
+  //   "when": "!explorerViewletFocus"
+  // },
   {
   "key": "tab",
   "command": "tab",
