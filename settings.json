@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": false,
- "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.suggestOnTriggerCharacters": false,
   "editor.suggest.insertMode": "replace",
@@ -22,27 +22,60 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
-    { "before": ["<S-h>"], "commands": [":bprevious"] },
-    { "before": ["<S-l>"], "commands": [":bnext"] },
-// {
-//   "before": ["p"],
-//   "commands": ["editor.action.clipboardPasteAction"]
-// },
-
-//   {
-//   "before": ["y"],
-//   "commands": ["editor.action.clipboardCopyAction"]
-// },
-  // splits
-    { "before": ["leader", "v"], "commands": [":vsplit"] },
-    { "before": ["leader", "s"], "commands": [":split"] },
-
+    {
+      "before": [
+        "<S-h>"
+      ],
+      "commands": [
+        ":bprevious"
+      ]
+    },
+    {
+      "before": [
+        "<S-l>"
+      ],
+      "commands": [
+        ":bnext"
+      ]
+    },
+    // {
+    //   "before": ["p"],
+    //   "commands": ["editor.action.clipboardPasteAction"]
+    // },
+    //   {
+    //   "before": ["y"],
+    //   "commands": ["editor.action.clipboardCopyAction"]
+    // },
+    // splits
+    {
+      "before": [
+        "leader",
+        "v"
+      ],
+      "commands": [
+        ":vsplit"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "d"
+      ],
+      "commands": [
+        ":split"
+      ]
+    },
     // panes
     {
-      "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
+      "before": [
+        "leader",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
     },
-    //copy whole file 
+    //copyj whole file 
     // {
     //   "before": ["<leader>", "Y"],
     //   "commands": [
@@ -51,73 +84,197 @@
     //   ]
     // },
     {
-      "before": ["leader", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
+      "before": [
+        "leader",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
     },
     {
-      "before": ["leader", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
+      "before": [
+        "leader",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
     },
     {
-      "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
+      "before": [
+        "leader",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
     },
     // NICE TO HAVE
-    { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "q"], "commands": [":q!"] },
-    { "before": ["leader", "x"], "commands": [":x!"] },
     {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "before": [
+        "leader",
+        "q"
+      ],
+      "commands": [
+        ":q!"
+      ]
     },
     {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "leader",
+        "x"
+      ],
+      "commands": [
+        ":x!"
+      ]
     },
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
     }
   ],
   "vim.handleKeys": {
-        "<C-p>": false,
-        "<C-w>": false
-    },
+    "<C-p>": false,
+    "<C-w>": false
+  },
   "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-
-    "vim.visualModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "p"],
-        "commands": [
-          {
-            "command": "vim.remap",
-            "args": {
-              "after": ["\"", "_", "d", "P"]
-            }
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "\"",
+              "_",
+              "d",
+              "P"
+            ]
           }
-        ]
-      }
-    ],
+        }
+      ]
+    }
+  ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
     // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    },
     // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    {
+      "before": [
+        "leader",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }
   ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -131,28 +288,36 @@
   },
   "workbench.activityBar.location": "hidden",
   "editor.autoClosingBrackets": "never",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
   "editor.stickyScroll.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": false,
   "explorer.compactFolders": false,
   "workbench.editor.showTabs": "none",
   "background.editor": {
-      "useFront": true,
-      "style": {
-        "background-size": "cover",
-        "opacity": 0.07,
-        "width":"100%",
-        "height":"100%",
-      },
-      "styles": [{}, {}, {}],
-      "images": ["file:///home/mueez/Downloads/images/upscalemedia-transformed.jpeg"],
-      "interval": 0,
-      "random": false
+    "useFront": true,
+    "style": {
+      "background-size": "cover",
+      "opacity": 0.07,
+      "width": "100%",
+      "height": "100%",
     },
-    "workbench.colorTheme": "Vim Deep Dark",
-    "workbench.sideBar.location": "right",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "vscode-blur-linux.opacity": 70,
-    "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "explorer.confirmPasteNative": false
+    "styles": [
+      {},
+      {},
+      {}
+    ],
+    "images": [
+      "file:///home/mueez/Downloads/images/upscalemedia-transformed.jpeg"
+    ],
+    "interval": 0,
+    "random": false
+  },
+  "workbench.colorTheme": "Vim Deep Dark",
+  "workbench.sideBar.location": "right",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vscode-blur-linux.opacity": 70,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "explorer.confirmPasteNative": false
 }
